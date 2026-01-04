@@ -95,6 +95,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-links a');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        // Simple animation for hamburger
+        const spans = menuToggle.querySelectorAll('span');
+        if (mobileMenu.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translateY(6px)';
+            spans[1].style.transform = 'rotate(-45deg) translateY(-6px)';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.transform = 'none';
+        }
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            const spans = menuToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.transform = 'none';
+        });
+    });
+
     // Smooth scroll for nav links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

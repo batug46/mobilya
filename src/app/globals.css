@@ -511,26 +511,29 @@ footer {
   nav {
     flex-direction: row;
     justify-content: space-between;
-    gap: 0.3rem;
-    padding: 1rem 3%;
+    gap: 0.2rem;
+    padding: 0.8rem 3%;
     mix-blend-mode: normal;
     background: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(10px);
+    width: 100%;
+    left: 0;
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1rem;
     flex-shrink: 0;
+    margin-right: 0.5rem;
   }
 
   .nav-links {
     width: auto;
     justify-content: flex-end;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .nav-links a {
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     letter-spacing: 0;
   }
 
@@ -567,19 +570,21 @@ footer {
 
   .modal-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem 5%;
+    gap: 1.5rem;
+    padding: 4rem 5% 2rem;
     text-align: center;
   }
 
   .modal-image {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
 
   .modal-image img {
-    max-height: 45vh;
-    width: auto;
+    max-height: 40vh;
+    width: 100% !important;
+    height: auto !important;
     object-fit: contain;
   }
 
@@ -587,9 +592,24 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .modal-details h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .modal-details p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding: 0 5%;
+  }
+
+  .buy-btn {
+    padding: 1rem 2rem;
+    width: 100%;
+    font-size: 0.8rem;
   }
 }

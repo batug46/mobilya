@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const observerOptions = {
@@ -65,13 +66,35 @@ export default function Home() {
   return (
     <>
       <nav>
-        <div className="logo">LUXE</div>
-        <div className="nav-links">
+        <div className="logo">
+          <Link href="/" onClick={() => setIsMenuOpen(false)}>LUXE</Link>
+        </div>
+        <div className="nav-links desktop-only">
           <a href="#koleksiyon">Koleksiyon</a>
           <a href="#felsefe">Felsefe</a>
           <a href="#iletisim">İletişim</a>
         </div>
+        <button
+          className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
       </nav>
+
+      <div className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`}>
+        <div className="mobile-menu-links">
+          <a href="#koleksiyon" onClick={() => setIsMenuOpen(false)}>Koleksiyon</a>
+          <a href="#felsefe" onClick={() => setIsMenuOpen(false)}>Felsefe</a>
+          <a href="#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</a>
+          <div className="mobile-menu-footer">
+            <p>LUXE Architectural Objects</p>
+            <p>© 2024 İstanbul</p>
+          </div>
+        </div>
+      </div>
 
       <main>
         {/* Hero Section */}

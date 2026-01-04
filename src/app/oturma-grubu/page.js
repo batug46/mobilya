@@ -52,7 +52,7 @@ export default function OturmaGrubu() {
             <main>
                 <section style={{ paddingTop: '15rem' }}>
                     <span className="section-tag reveal active">Katalog</span>
-                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', fontSize: '5rem', marginBottom: '2rem' }}>OTURMA GRUBU</h1>
+                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>OTURMA GRUBU</h1>
                     <p className="reveal active" style={{ maxWidth: '600px', color: 'var(--text-secondary)', marginBottom: '5rem' }}>
                         Konforun en saf hali. Heykelsi formlar ve dokulu kumaşların birleşimiyle tasarlanan oturma ünitelerimiz, yaşam alanınızın merkezine sessiz bir otorite katar.
                     </p>

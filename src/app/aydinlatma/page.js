@@ -50,7 +50,7 @@ export default function Aydınlatma() {
             <main>
                 <section style={{ paddingTop: '15rem' }}>
                     <span className="section-tag reveal active">Katalog</span>
-                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', fontSize: '5rem', marginBottom: '2rem' }}>AYDINLATMA</h1>
+                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>AYDINLATMA</h1>
                     <p className="reveal active" style={{ maxWidth: '600px', color: 'var(--text-secondary)', marginBottom: '5rem' }}>
                         Işığın mimari formu. Mekanı sadece aydınlatmakla kalmayan, aynı zamanda birer heykel gibi konumlanan aydınlatma objelerimizle tanışın.
                     </p>

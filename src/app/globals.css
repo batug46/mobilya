@@ -21,11 +21,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+  position: relative;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  overflow-x: hidden;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -619,8 +625,29 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+  html,
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  section {
+    padding: 4rem 6%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h1,
+  h2,
+  h3 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
   nav {
-    padding: 1.5rem 6%;
+    padding: 1.2rem 6%;
     background: transparent;
     backdrop-filter: none;
   }
@@ -639,14 +666,24 @@ footer {
   }
 
   .hero {
-    padding: 120px 6% 60px;
+    padding: 100px 6% 40px;
     height: auto;
     min-height: auto;
+    width: 100%;
+    overflow: hidden;
   }
 
   .hero h1 {
-    font-size: 16vw;
+    font-size: 13vw;
+    /* Reduced from 16vw */
     margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+
+  section h2 {
+    font-size: 10vw !important;
+    /* Force smaller size for philosophy/contact titles */
+    line-height: 1.1;
   }
 
   .hero-visual {

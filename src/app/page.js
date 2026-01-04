@@ -148,7 +148,7 @@ export default function Home() {
         <section id="felsefe" style={{ background: 'var(--bg-secondary)' }}>
           <div style={{ maxWidth: '800px' }}>
             <span className="section-tag reveal">Vizyon</span>
-            <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontSize: '4rem', marginBottom: '2rem' }}>NESNELERİN RUHU</h2>
+            <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>NESNELERİN RUHU</h2>
             <p className="reveal" style={{ fontSize: '1.5rem', lineHeight: 1.6, fontWeight: 300, marginBottom: '2rem' }}>
               Modernizm sadece bir akım değil, bir arınma sürecidir.
               LUXE, fazlalıklardan kurtulmuş, özüne odaklanmış ve bulunduğu mekana karakter katan objeler tasarlar.
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="contact-container">
             <div className="contact-text">
               <span className="section-tag reveal">İletişim</span>
-              <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', fontSize: '4rem', marginBottom: '2rem' }}>BİRLİKTE<br />ÜRETELİM</h2>
+              <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>BİRLİKTE<br />ÜRETELİM</h2>
               <p className="reveal" style={{ marginBottom: '3rem', color: 'var(--text-secondary)' }}>
                 Özel projeleriniz ve mimari danışmanlık talepleriniz için bize ulaşın.
                 Showroom randevusu alarak koleksiyonumuzu yakından inceleyebilirsiniz.

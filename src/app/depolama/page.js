@@ -51,7 +51,7 @@ export default function Depolama() {
             <main>
                 <section style={{ paddingTop: '15rem' }}>
                     <span className="section-tag reveal active">Katalog</span>
-                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', fontSize: '5rem', marginBottom: '2rem' }}>DEPOLAMA</h1>
+                    <h1 className="reveal active" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>DEPOLAMA</h1>
                     <p className="reveal active" style={{ maxWidth: '600px', color: 'var(--text-secondary)', marginBottom: '5rem' }}>
                         Düzenin estetiği. Eşyalarınızı saklarken mekanın ruhunu koruyan, temiz hatlara sahip depolama ünitelerimiz ve kabinetlerimiz.
                     </p>

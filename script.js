@@ -61,19 +61,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+
+            // Push history state to handle back button
+            history.pushState({ modalOpen: true }, '', '#detay');
         });
     });
 
-    modalClose.addEventListener('click', () => {
+    const closeModal = () => {
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
+        // If we are still on the #detay hash, go back
+        if (window.location.hash === '#detay') {
+            history.back();
+        }
+    };
+
+    modalClose.addEventListener('click', () => {
+        history.back(); // Use history.back() to trigger popstate logic
+    });
+
+    // Handle back button and popstate
+    window.addEventListener('popstate', (e) => {
+        if (modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     });
 
     // Close modal on escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
+            history.back();
         }
     });
 

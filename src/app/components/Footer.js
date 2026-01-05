@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="footer-content">
                 <div className="footer-section">
                     <h4>LUXE</h4>
-                    <p style={{ fontSize: '0.9rem', opacity: 0.5, lineHeight: 1.8 }}>Modern mimari ve zanaatı birleştiren, İstanbul merkezli bir tasarım stüdyosu.</p>
+                    <p>Modern mimari ve zanaatı birleştiren, İstanbul merkezli bir tasarım stüdyosu.</p>
                 </div>
                 <div className="footer-section">
                     <h4>Katalog</h4>
@@ -21,24 +21,24 @@ export default function Footer() {
                     <h4>Kurumsal</h4>
                     <ul>
                         <li><Link href="/hakkimizda">Hakkımızda</Link></li>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Projeler</li>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Sürdürülebilirlik</li>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Kariyer</li>
+                        <li><a href="#">Projeler</a></li>
+                        <li><a href="#">Sürdürülebilirlik</a></li>
+                        <li><a href="#">Kariyer</a></li>
                     </ul>
                 </div>
                 <div className="footer-section">
                     <h4>Sosyal</h4>
                     <ul>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Instagram</li>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Pinterest</li>
-                        <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>LinkedIn</li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                        <li><a href="#">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
             <div className="footer-bottom">
                 <div className="footer-logo">LUXE</div>
                 <div style={{ textAlign: 'right' }}>
-                    <p style={{ fontSize: '0.8rem', opacity: 0.4 }}>© 2024 LUXE ARCHITECTURAL OBJECTS</p>
+                    <p style={{ fontSize: '0.8rem', opacity: 0.6 }}>© 2024 LUXE ARCHITECTURAL OBJECTS</p>
                 </div>
             </div>
         </footer>

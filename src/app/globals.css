@@ -710,8 +710,9 @@ footer {
   }
 
   .modal-image {
-    padding: 4rem 2rem 2rem;
-    height: 50vh;
+    padding: 6rem 2rem 2rem;
+    /* Increased top padding from 4rem to 6rem */
+    height: 55vh;
   }
 
   .modal-image img {
@@ -749,10 +750,12 @@ footer {
   }
 
   .modal-close {
-    top: 2rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 8px 15px;
-    backdrop-filter: blur(10px);
+    top: 1.2rem;
+    /* Moved higher from 2rem */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    backdrop-filter: blur(15px);
     border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

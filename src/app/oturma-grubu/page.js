@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 export default function OturmaGrubu() {
     const [selectedProduct, setSelectedProduct] = useState(null)
@@ -40,15 +41,7 @@ export default function OturmaGrubu() {
 
     return (
         <>
-            <nav>
-                <div className="logo"><Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>LUXE</Link></div>
-                <div className="nav-links">
-                    <Link href="/#koleksiyon">Koleksiyon</Link>
-                    <Link href="/#felsefe">Felsefe</Link>
-                    <Link href="/hakkimizda">Hakkımızda</Link>
-                    <Link href="/#iletisim">İletişim</Link>
-                </div>
-            </nav>
+            <Navbar />
 
             <main>
                 <section style={{ paddingTop: '15rem' }}>
@@ -74,26 +67,7 @@ export default function OturmaGrubu() {
                 </section>
             </main>
 
-            <footer>
-                {/* Same footer code could be a component, but keeping it simple for now */}
-                <div className="footer-content">
-                    <div className="footer-section">
-                        <h4>LUXE</h4>
-                        <p style={{ fontSize: '0.9rem', opacity: 0.5, lineHeight: 1.8 }}>Modern mimari ve zanaatı birleştiren, İstanbul merkezli bir tasarım stüdyosu.</p>
-                    </div>
-                    <div className="footer-section">
-                        <h4>Katalog</h4>
-                        <ul>
-                            <li><Link href="/hakkimizda">Hakkımızda</Link></li>
-                            <li><Link href="/oturma-grubu">Oturma Grubu</Link></li>
-                            <li><Link href="/yemek-odasi">Yemek Odası</Link></li>
-                            <li><Link href="/aydinlatma">Aydınlatma</Link></li>
-                            <li><Link href="/depolama">Depolama</Link></li>
-                        </ul>
-                    </div>
-                    {/* ... other sections omitted for brevity in template, but I'll add them properly ... */}
-                </div>
-            </footer>
+            <Footer />
 
             {selectedProduct && (
                 <div className="modal active">

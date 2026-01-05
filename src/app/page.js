@@ -70,9 +70,10 @@ export default function Home() {
           <Link href="/" onClick={() => setIsMenuOpen(false)}>LUXE</Link>
         </div>
         <div className="nav-links desktop-only">
-          <a href="#koleksiyon">Koleksiyon</a>
-          <a href="#felsefe">Felsefe</a>
-          <a href="#iletisim">İletişim</a>
+          <Link href="/#koleksiyon">Koleksiyon</Link>
+          <Link href="/#felsefe">Felsefe</Link>
+          <Link href="/hakkimizda">Hakkımızda</Link>
+          <Link href="/#iletisim">İletişim</Link>
         </div>
         <button
           className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
@@ -86,9 +87,10 @@ export default function Home() {
 
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`}>
         <div className="mobile-menu-links">
-          <a href="#koleksiyon" onClick={() => setIsMenuOpen(false)}>Koleksiyon</a>
-          <a href="#felsefe" onClick={() => setIsMenuOpen(false)}>Felsefe</a>
-          <a href="#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</a>
+          <Link href="/#koleksiyon" onClick={() => setIsMenuOpen(false)}>Koleksiyon</Link>
+          <Link href="/#felsefe" onClick={() => setIsMenuOpen(false)}>Felsefe</Link>
+          <Link href="/hakkimizda" onClick={() => setIsMenuOpen(false)}>Hakkımızda</Link>
+          <Link href="/#iletisim" onClick={() => setIsMenuOpen(false)}>İletişim</Link>
           <div className="mobile-menu-footer">
             <p>LUXE Architectural Objects</p>
             <p>© 2024 İstanbul</p>
@@ -145,7 +147,7 @@ export default function Home() {
         </section>
 
         {/* Philosophy Section */}
-        <section id="felsefe" style={{ background: 'var(--bg-secondary)' }}>
+        <section id="felsefe" style={{ background: 'var(--bg-primary)' }}>
           <div style={{ maxWidth: '800px' }}>
             <span className="section-tag reveal">Vizyon</span>
             <h2 className="reveal" style={{ fontFamily: 'var(--font-heading)', marginBottom: '2rem' }}>NESNELERİN RUHU</h2>
@@ -153,11 +155,56 @@ export default function Home() {
               Modernizm sadece bir akım değil, bir arınma sürecidir.
               LUXE, fazlalıklardan kurtulmuş, özüne odaklanmış ve bulunduğu mekana karakter katan objeler tasarlar.
             </p>
-            <div className="reveal" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
-              <p style={{ fontSize: '1rem', opacity: 0.6 }}>
-                Tasarım felsefemiz, her malzemenin kendi dilini konuşmasına izin vermek üzerine kuruludur.
-                Ahşabın sıcaklığı, mermerin vakarı ve camın dinginliği; bir araya geldiklerinde sessiz bir senfoni oluştururlar.
+          </div>
+        </section>
+
+        {/* Video / About Section from Image */}
+        <section id="hakkimizda" className="about-section">
+          <div className="about-header">
+            <div className="social-links">
+              <a href="#" className="social-icon">f</a>
+              <a href="#" className="social-icon">t</a>
+              <a href="#" className="social-icon">in</a>
+              <a href="#" className="social-icon">🔗</a>
+            </div>
+          </div>
+          <div className="about-container">
+            <div className="about-text reveal">
+              <span className="section-tag">Hakkımızda</span>
+              <h2>Tasarımda<br />Mükemmelik</h2>
+              <p className="description">
+                25 yıllık deneyimimizle, modern yaşamın ihtiyaçlarını karşılayan, estetik ve fonksiyonel mobilyalar üretiyoruz.
+                Her parça, yaşam alanlarınızı daha konforlu ve şık hale getirmek için özenle tasarlanır.
               </p>
+
+              <div className="stats-grid">
+                <div className="stat-item">
+                  <h3>1000+</h3>
+                  <p>Mutlu Müşteri</p>
+                </div>
+                <div className="stat-item">
+                  <h3>50+</h3>
+                  <p>Özgün Tasarım</p>
+                </div>
+                <div className="stat-item">
+                  <h3>25+</h3>
+                  <p>Yıllık Deneyim</p>
+                </div>
+              </div>
+              <Link href="/hakkimizda" className="buy-btn" style={{ textDecoration: 'none', textAlign: 'center' }}>Daha Fazla Bilgi</Link>
+            </div>
+
+            <div className="video-column reveal">
+              <div className="video-wrapper">
+                <Image
+                  src="/assets/sofa.png"
+                  alt="Luxe Design Video"
+                  width={800}
+                  height={500}
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className="play-button"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -218,7 +265,7 @@ export default function Home() {
           <div className="footer-section">
             <h4>Kurumsal</h4>
             <ul>
-              <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Hikayemiz</li>
+              <li><Link href="/hakkimizda">Hakkımızda</Link></li>
               <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Projeler</li>
               <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Sürdürülebilirlik</li>
               <li style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.5 }}>Kariyer</li>

@@ -44,6 +44,7 @@ export default function Depolama() {
                 <div className="nav-links">
                     <Link href="/#koleksiyon">Koleksiyon</Link>
                     <Link href="/#felsefe">Felsefe</Link>
+                    <Link href="/hakkimizda">Hakkımızda</Link>
                     <Link href="/#iletisim">İletişim</Link>
                 </div>
             </nav>
@@ -81,6 +82,7 @@ export default function Depolama() {
                     <div className="footer-section">
                         <h4>Katalog</h4>
                         <ul>
+                            <li><Link href="/hakkimizda">Hakkımızda</Link></li>
                             <li><Link href="/oturma-grubu">Oturma Grubu</Link></li>
                             <li><Link href="/yemek-odasi">Yemek Odası</Link></li>
                             <li><Link href="/aydinlatma">Aydınlatma</Link></li>
